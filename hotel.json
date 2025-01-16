@@ -1,60 +1,101 @@
 {
-    "usuarios": [
-      {
-        "id": 1,
-        "nombre": "Juan Pérez",
-        "correo": "juan.perez@ejemplo.com",
-        "contraseña": "contraseñasegura",
-        "telefono": "1234567890",
-        "reservas": []
-      }
-    ],
-    "habitaciones": [
-      {
-        "id": 101,
-        "nombre": "Habitacion Sencilla",
-        "imgs": ["https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3479927719-4x3?wid=470&fit=constrain",
-        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697790279-4x3?wid=470&fit=constrain"],
-        "descripcion": "Habitación con  una cama king size, espacio de trabajo y baño privado.",
-        "precio_por_noche": "150.000",
-        "maximo_huespedes": 2,
-        "habitaciones_disponibles": 16,
-        "n_habitaciones": [201, 202, 203, 204, 301, 302, 303, 304, 401, 402, 403, 404, 501, 502, 503, 504]
-      },
-      {
-        "id": 102,
-        "nombre": "Habitacion Doble",
-        "imgs": ["https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697789966-4x3?wid=470&fit=constrain",
-        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3479932679-4x3?wid=470&fit=constrain","https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-7731464931-4x3?wid=470&fit=constrain"],
-        "descripcion": "Habitación con dos camas doble, espacio amplio de trabajo y baño privado.",
-        "precio_por_noche": "230.000",
-        "maximo_huespedes": 4,
-        "habitaciones_disponibles": 12,
-        "n_habitaciones": [601, 602, 603, 701, 702, 703, 801, 802, 803, 901, 902, 903]
-      },
-
-      {
-        "id": 103,
-        "nombre": "Suite King",
-        "imgs": ["https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-4192235498-4x3?wid=470&fit=constrain",
-        "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-7731465023-4x3?wid=470&fit=constrain", "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-10028884716-4x3?wid=470&fit=constrain"],
-        "descripcion": "Suite de 300 pies cuadrados Sala de estar Comedor Cocina Microondas Mininevera Balcón Sofá cama Se admiten mascotas",
-        "precio_por_noche":"330.000",
-        "maximo_huespedes": 4,
-        "habitaciones_disponibles": 3,
-        "n_habitaciones": [1001, 1101, 1201]
-      }
-    ],
-    "reservas": [
-      {
-        "id": 1,
-        "id_usuario": 1,
-        "id_habitacion": 101,
-        "fecha_entrada": "2025-01-15",
-        "fecha_salida": "2025-01-16",
-        "precio_total": 150,
-        "estado": "activa",
-        "politicas_aceptadas": true
-      }
-    ]
-  }
+  "usuarios": [
+    {
+      "id": "220d",
+      "nombre": "Andres Portilla",
+      "correo": "123andresportilla@gmail.com",
+      "contrasena": "123",
+      "telefono": "3144534667",
+      "reserva": []
+    }
+  ],
+  "habitaciones": [
+    {
+      "id": 101,
+      "nombre": "Habitacion Sencilla",
+      "imgs": [
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3479927719-4x3?wid=470&fit=constrain",
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697790279-4x3?wid=470&fit=constrain"
+      ],
+      "descripcion": "Habitación con  una cama king size, espacio de trabajo y baño privado.",
+      "precio_por_noche": "150.000",
+      "maximo_huespedes": 2,
+      "habitaciones_disponibles": 16,
+      "n_habitaciones": [
+        201,
+        202,
+        203,
+        204,
+        301,
+        302,
+        303,
+        304,
+        401,
+        402,
+        403,
+        404,
+        501,
+        502,
+        503,
+        504
+      ]
+    },
+    {
+      "id": 102,
+      "nombre": "Habitacion Doble",
+      "imgs": [
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697789966-4x3?wid=470&fit=constrain",
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3479932679-4x3?wid=470&fit=constrain",
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-7731464931-4x3?wid=470&fit=constrain"
+      ],
+      "descripcion": "Habitación con dos camas doble, espacio amplio de trabajo y baño privado.",
+      "precio_por_noche": "230.000",
+      "maximo_huespedes": 4,
+      "habitaciones_disponibles": 12,
+      "n_habitaciones": [
+        601,
+        602,
+        603,
+        701,
+        702,
+        703,
+        801,
+        802,
+        803,
+        901,
+        902,
+        903
+      ]
+    },
+    {
+      "id": 103,
+      "nombre": "Suite King",
+      "imgs": [
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-4192235498-4x3?wid=470&fit=constrain",
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-7731465023-4x3?wid=470&fit=constrain",
+        "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-10028884716-4x3?wid=470&fit=constrain"
+      ],
+      "descripcion": "Suite de 300 pies cuadrados Sala de estar Comedor Cocina Microondas Mininevera Balcón Sofá cama Se admiten mascotas",
+      "precio_por_noche": "330.000",
+      "maximo_huespedes": 4,
+      "habitaciones_disponibles": 3,
+      "n_habitaciones": [
+        1001,
+        1101,
+        1201
+      ]
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "id_usuario": 1,
+      "id_habitacion": 101,
+      "fecha_entrada": "2025-01-15",
+      "fecha_salida": "2025-01-16",
+      "precio_total": 150,
+      "estado": "activa",
+      "politicas_aceptadas": true
+    }
+  ]
+}
