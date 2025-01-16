@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body>
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between items-center py-4">
+            
+            <div class="text-2xl font-bold text-gray-800">
+              <a href="#">MiLogo</a>
+            </div>
+      
+            <div class="md:hidden">
+              <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+      
+            <div id="menu" class="hidden md:flex space-x-4">
+              <a href="#" class="text-gray-800 hover:text-blue-600">Inicio</a>
+              <a href="#" class="text-gray-800 hover:text-blue-600">Habitaciones</a>
+              <a href="#" class="text-gray-800 hover:text-blue-600">Contacto</a>
+              <a href="#" class="text-gray-800 hover:text-blue-600">Iniciar Sesion</a>
+            </div>
+          </div>
+    
+          <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inicio</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Habitaciones</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contacto</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Iniciar Sesion</a>
+          </div>
+        </div>
+      </nav>
+      
+    <div class="hTarjeta">
+
+    </div>
+
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+
+            <div class="text-center md:text-left">
+              <h2 class="text-2xl font-bold">MiHotel</h2>
+              <p class="text-sm text-gray-400">Tu lugar de descanso perfecto</p>
+            </div>
+      
+           
+            <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 text-center">
+              <a href="#" class="text-gray-400 hover:text-blue-500">Inicio</a>
+              <a href="#" class="text-gray-400 hover:text-blue-500">Habitaciones</a>
+              <a href="#" class="text-gray-400 hover:text-blue-500">Servicios</a>
+              <a href="#" class="text-gray-400 hover:text-blue-500">Contacto</a>
+            </div>
+      
+        
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.985h-2.54v-2.892h2.54v-2.194c0-2.507 1.493-3.89 3.777-3.89 1.095 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.867h2.773l-.443 2.892h-2.33v6.985C18.343 21.128 22 16.991 22 12z" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.04c-5.522 0-10 4.477-10 10 0 4.419 2.868 8.167 6.839 9.488-.1-.84-.2-2.151.04-3.07.23-.88 1.47-5.612 1.47-5.612s-.37-.74-.37-1.83c0-1.712.993-2.99 2.23-2.99 1.05 0 1.556.785 1.556 1.728 0 1.052-.671 2.63-1.016 4.084-.29 1.23.617 2.23 1.83 2.23 2.194 0 3.884-2.314 3.884-5.646 0-2.935-2.1-4.987-5.162-4.987-3.515 0-5.582 2.637-5.582 5.367 0 1.05.41 2.17.923 2.778.1.11.11.2.08.31-.09.35-.31 1.23-.35 1.4-.05.2-.18.24-.41.14-1.528-.71-2.482-2.937-2.482-4.73 0-3.843 2.773-7.364 8.004-7.364 4.197 0 7.452 2.99 7.452 6.995 0 4.16-2.625 7.495-6.267 7.495-1.22 0-2.37-.62-2.76-1.35 0 0-.66 2.52-.82 3.12-.25.88-.74 1.77-1.2 2.44C9.885 21.852 10.923 22 12 22c5.523 0 10-4.478 10-10 0-5.523-4.477-10-10-10z" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.954 4.569c-.885.39-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.163-2.723-.949.555-2.007.959-3.127 1.175-.896-.956-2.173-1.555-3.59-1.555-2.717 0-4.92 2.206-4.92 4.917 0 .39.045.765.127 1.124-4.087-.205-7.72-2.162-10.148-5.138-.422.722-.666 1.562-.666 2.457 0 1.697.865 3.192 2.18 4.068-.803-.026-1.56-.247-2.22-.616v.061c0 2.367 1.684 4.342 3.918 4.788-.41.112-.843.171-1.29.171-.315 0-.622-.03-.923-.086.623 1.945 2.428 3.362 4.565 3.402-1.673 1.309-3.779 2.092-6.066 2.092-.394 0-.781-.023-1.17-.068 2.163 1.391 4.731 2.203 7.506 2.203 9.025 0 13.955-7.485 13.955-13.976 0-.213 0-.425-.016-.637.959-.693 1.797-1.56 2.457-2.548l-.047-.02z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+      
+
+          <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+            <p class="text-sm text-gray-500">© 2025 MiHotel. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+      
+
+</body>
+<script src="../js/app.js" defer></script>
+<script src="../js/carrusel.js"></script>
+<script src="../js/menu.js"></script>
+
+</html>
