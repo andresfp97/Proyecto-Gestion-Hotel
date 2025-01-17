@@ -7,11 +7,19 @@
       "contrasena": "123",
       "telefono": "3144534667",
       "reserva": []
+    },
+    {
+      "id": "4507",
+      "nombre": "jinder arias",
+      "correo": "jinderjj@gmail.com",
+      "contrasena": "321",
+      "telefono": "3144534667",
+      "reserva": []
     }
   ],
   "habitaciones": [
     {
-      "id": 101,
+      "id": "101",
       "nombre": "Habitacion Sencilla",
       "imgs": [
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3479927719-4x3?wid=470&fit=constrain",
@@ -41,7 +49,7 @@
       ]
     },
     {
-      "id": 102,
+      "id": "102",
       "nombre": "Habitacion Doble",
       "imgs": [
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697789966-4x3?wid=470&fit=constrain",
@@ -68,7 +76,7 @@
       ]
     },
     {
-      "id": 103,
+      "id": "103",
       "nombre": "Suite King",
       "imgs": [
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-4192235498-4x3?wid=470&fit=constrain",
@@ -88,7 +96,7 @@
   ],
   "reservas": [
     {
-      "id": 1,
+      "id": "1",
       "id_usuario": 1,
       "id_habitacion": 101,
       "fecha_entrada": "2025-01-15",

@@ -6,46 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro y Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/login-register.js" defer></script>
+    <script src="../js/login-register.js" type="module" defer></script>
 </head>
 
 <body>
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-
-                <div class="text-2xl font-bold text-gray-800">
-                    <a href="#">Hocami</a>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="menu-btn" class="focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-6 h-6 text-gray-800">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div id="menu" class="hidden md:flex space-x-4">
-                    <a href="#" class="text-gray-800 hover:text-blue-600">Inicio</a>
-                    <a href="habitaciones.html" class="text-gray-800 hover:text-blue-600">Habitaciones</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-600">Contacto</a>
-                    <a href="login-registro.html" class="text-gray-800 hover:text-blue-600">Iniciar Sesion</a>
-                </div>
-            </div>
-
-            <div id="mobile-menu" class="hidden md:hidden">
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inicio</a>
-                <a href="habitaciones.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Habitaciones</a>
-                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contacto</a>
-                <a href="login-registro.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Iniciar Sesion</a>
-            </div>
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+     
+        <div class="text-2xl font-bold text-gray-800">
+          <a href="#">MiLogo</a>
         </div>
-    </nav>
+  
+  
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+  
+      
+        <div id="menu" class="hidden md:flex space-x-4">
+          <a href="../index.html" class="text-gray-800 hover:text-blue-600">Inicio</a>
+          <a href="habitaciones.html" class="text-gray-800 hover:text-blue-600">Habitaciones</a>
+          <a href="#" class="text-gray-800 hover:text-blue-600">Contacto</a>
+         
+          <a href="login-registro.html" id="login-btn" class="text-gray-800 hover:text-blue-600">Iniciar Sesión</a>
+          <button id="logout-btn" class="hidden text-white bg-red-600 px-4 rounded hover:bg-red-700 focus:outline-none">Cerrar Sesión</button>
+        </div>
+      </div>
+  
+    
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inicio</a>
+        <a href="html/habitaciones.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Habitaciones</a>
+        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contacto</a>
+        <a href="login-registro.html" id="mobile-login-btn" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Iniciar Sesión</a>
+        <button id="mobile-logout-btn" class="hidden block px-4 text-white bg-red-600 rounded hover:bg-red-700">Cerrar Sesión</button>
+      </div>
+    </div>
+</nav>
     <div class="bg-gray-100 min-h-max flex items-center justify-center ">
         <div class="bg-white rounded shadow-lg w-full max-w-md p-6 my-32">
-            <!-- Tabs para Alternar -->
             <div class="flex border-b mb-6">
               <button id="tab-login" class="flex-1 py-2 text-center text-gray-800 border-b-2 border-blue-600 font-bold focus:outline-none">
                 Login
@@ -55,7 +59,6 @@
               </button>
             </div>
         
-            <!-- Formulario de Login -->
             <form id="login-form" class="space-y-4">
               <h2 class="text-2xl font-bold text-center text-gray-800">Iniciar Sesión</h2>
               <div>
@@ -69,7 +72,25 @@
               <button type="submit" class="w-full py-2 text-white bg-blue-600 rounded hover:bg-blue-700">Ingresar</button>
             </form>
         
-            <!-- Formulario de Registro -->
+            <form id="register-form" class="space-y-4 hidden">
+              <h2 class="text-2xl font-bold text-center text-gray-800">Registro</h2>
+              <div>
+                <label for="register-nombre" class="block text-sm font-medium text-gray-600">Nombre Completo</label>
+                <input type="text" id="registro-nombre" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+              </div>
+              <div>
+                <label for="register-email" class="block text-sm font-medium text-gray-600">Correo Electrónico</label>
+                <input type="email" id="registro-correo" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+              </div>
+              <div>
+                <label for="register-password" class="block text-sm font-medium text-gray-600">Contraseña</label>
+                <input type="password" id="registro-contrasena" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+              </div>
+              <div>
+                <label for="register-telefono" class="block text-sm font-medium text-gray-600">Teléfono</label>
+                <input type="tel" id="registro-telefono" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+              </div>
+              <button type="submit" class="w-full py-2 text-white bg-blue-600 rounded hover:bg-blue-700">Registrar</button>
             <form id="register-form" class="space-y-4 hidden">
               <h2 class="text-2xl font-bold text-center text-gray-800">Registro</h2>
               <div>
