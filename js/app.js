@@ -20,7 +20,7 @@ async function pintarHabitaciones() {
     let tarjetas = "";
  
         habitaciones.forEach((element, index) => {
-            tarjetas += `<div class="flex flex-col md:flex-row items-start p-4 bg-white rounded shadow-lg border w-11/12 md:w-3/5 mx-auto my-4 overflow-hidden"> 
+            tarjetas += `<div class="flex flex-col md:flex-row items-start p-4 bg-white rounded shadow-lg border w-11/12 md:w-3/5 mx-auto my-4 overflow-hidden cursor-pointer"> 
     <div class="relative w-full md:w-1/3 mb-4 md:mb-0 overflow-hidden h-64" onmouseover="startSlide(${index})" onmouseout="stopSlide()">`;
 let strimgs = "";
 for (imagen in element.imgs) {

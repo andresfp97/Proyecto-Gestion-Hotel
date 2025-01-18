@@ -10,10 +10,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../js/login-register.js" type="module" defer></script>
     <script src="js/slider.js" defer></script>
-     <script src="js/menu.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 
-<body>
+<body class="box-border">
+    <a class="relative z-10" href="https://wa.me/573144534667?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios."><img class="w-[70px] fixed bottom-[3vh] left-[2vw]  " src="../img/pngegg.png" alt=""></a>
+
+    <!-- barra de navegacion -->
     <nav class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -21,7 +24,6 @@
                 <div class="text-2xl font-bold text-gray-800">
                     <a href="#">MiLogo</a>
                 </div>
-
 
                 <div class="md:hidden">
                     <button id="menu-btn" class="focus:outline-none">
@@ -31,7 +33,6 @@
                         </svg>
                     </button>
                 </div>
-
 
                 <div id="menu" class="hidden md:flex space-x-4">
                     <a href="index.html" class="text-gray-800 hover:text-blue-600">Inicio</a>
@@ -45,8 +46,7 @@
                         Sesión</button>
                 </div>
             </div>
-
-
+            <!-- menu para movil -->
             <div id="mobile-menu" class="hidden md:hidden">
                 <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inicio</a>
                 <a href="html/habitaciones.html"
@@ -59,19 +59,15 @@
             </div>
         </div>
     </nav>
-
-    <div class="conSlide bg-gray-100 flex justify-center items-center  w-[100vw]">
+    <!-- slider   -->
+    <div class="conSlide bg-gray-100 flex justify-center items-center  w-[98vw]">
         <div class="relative w-full overflow-hidden">
 
             <div id="slider" class="flex transition-transform duration-700 ease-in-out">
-                <img src="img/slider1.png" class="w-full flex-shrink-0"
-                    alt="Imagen 1">
-                <img src="img/slider2.png" class="w-full flex-shrink-0"
-                    alt="Imagen 2">
-                <img src="img/slider3.png" class="w-full flex-shrink-0"
-                    alt="Imagen 3">
-                <img src="img/slider4.png" class="w-full flex-shrink-0"
-                    alt="Imagen 4">
+                <img src="img/slider1.png" class="w-full flex-shrink-0" alt="Imagen 1">
+                <img src="img/slider2.png" class="w-full flex-shrink-0" alt="Imagen 2">
+                <img src="img/slider3.png" class="w-full flex-shrink-0" alt="Imagen 3">
+                <img src="img/slider4.png" class="w-full flex-shrink-0" alt="Imagen 4">
             </div>
 
             <button id="anterior"
@@ -79,8 +75,76 @@
             <button id="siguiente"
                 class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-full">&#8594;</button>
         </div>
-
     </div>
+
+    <!-- mas servicios  -->
+
+    <h2 class="py-8 text-2xl text-center font-bold"> NUESTROS SERVICIOS</h2>
+    <hr>
+
+
+    <div class="flex flex-wrap justify-center items-center py-20 gap-6 ">
+
+        <div class="servicio w-full sm:w-1/2 md:w-1/4 text-center">
+            <div class="overflow-hidden rounded-lg">
+                <img class="w-full rounded-lg mb-4 transform transition duration-[2000ms] hover:scale-150"
+                    src="img/piscina-servicios.jpg" alt="servicio 2">
+            </div>
+            <h3 class="text-lg font-semibold">Piscina</h3>
+            <p class="text-gray-600">Relájate en nuestra extraordinaria Piscina</p>
+        </div>
+
+        <div class="servicio w-full sm:w-1/2 md:w-1/4 text-center">
+            <div class="overflow-hidden rounded-lg">
+                <img class="w-full rounded-lg mb-4 transform transition duration-[2000ms] hover:scale-150"
+                    src="img/spa-servicios.jpg" alt="servicio 3">
+            </div>
+            <h3 class="text-lg font-semibold">Spa</h3>
+            <p class="text-gray-600">Disfruta de un relajante masaje</p>
+        </div>
+
+        <div class="servicio w-full sm:w-1/2 md:w-1/4 text-center">
+            <div class="overflow-hidden rounded-lg">
+                <img class="w-full rounded-lg mb-4 transform transition duration-[2000ms] hover:scale-150"
+                    src="img/resta-servicios.jpg" alt="servicio 3">
+            </div>
+            <h3 class="text-lg font-semibold">Restaurante</h3>
+            <p class="text-gray-600">Una deliciosa comida en nuestro restaurante</p>
+        </div>
+        <div class="servicio w-full sm:w-1/2 md:w-1/4 text-center">
+            <img class="w-full rounded-lg mb-4" src="img/bar-servicios.jpg" alt="servicio 5">
+            <h3 class="text-lg font-semibold">Bar</h3>
+            <p class="text-gray-600">Disfruta de una deliciosa bebida en nuestro bar</p>
+        </div>
+
+        <div class="servicio w-full sm:w-1/2 md:w-1/4 text-center">
+            <img class="w-full rounded-lg mb-4" src="img/piscina-servicios.jpg" alt="servicio 2">
+            <h3 class="text-lg font-semibold">Piscina</h3>
+            <p class="text-gray-600">Relájate en nuestra extraordinaria Piscina</p>
+        </div>
+        <div class="servicio w-full sm:w-1/2 md:w-1/4 text-center">
+            <img class="w-full rounded-lg mb-4" src="img/spa-servicios.jpg" alt="servicio 3">
+            <h3 class="text-lg font-semibold">Spa</h3>
+            <p class="text-gray-600">Disfruta de un relajante masaje</p>
+        </div>
+    </div>
+
+    <section id="inicio" class="relative h-screen bg-cover bg-center overflow-hidden transform transition duration-[6000ms] hover:scale-125"
+        style="background-image: url('https://www.stmoritzswitzerland.travel/uploads/images_accommodation/image/11399/3_bedroom_super-size_luxury_suite_9.jpg')">
+        <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-4xl font-bold mb-4">Bienvenido al Paraíso</h1>
+            <p class="text-lg mb-6">Tu escapada perfecta te espera</p>
+            <a href="">
+                <button  class="bg-yellow-500 text-black py-3 px-6 rounded-lg hover:bg-yellow-600">
+                    Explorar Habitaciones
+                </button>
+            </a>
+           
+        </div>
+    </section>
+
+
     <footer class="bg-gray-800 text-white py-20">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -127,4 +191,5 @@
         </div>
     </footer>
 </body>
+
 </html>
