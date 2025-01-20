@@ -78,7 +78,7 @@ function pintarReserva() {
 
 async function pintarDisponibles(index) {
     await getDatosHabitaciones();
-    console.log(habitaciones);
+    
 
     let disponibles = `<div class="container mx-auto py-8 w-[60%]">
 
@@ -107,12 +107,9 @@ async function pintarDisponibles(index) {
 
 }
 
- // Guarda IDs en el Set
 const seleccionadas = new Set();
-// Guarda la relación ID -> precio
 const precios = {};
 
-// Seleccionar/deseleccionar
 function toggleSeleccion(elemento) {
   const id = elemento.dataset.id;
   const precio = parseFloat(elemento.dataset.precio);
@@ -134,8 +131,19 @@ function toggleSeleccion(elemento) {
   actualizarResumen();
 }
 
+
+function eliminarCoincidencias(arregloPrimario, arregloSecundario) {
+  return arregloPrimario.filter(item => !arregloSecundario.includes(item));
+}
+
 // Actualizar el resumen
 function actualizarResumen() {
+
+  // sencillas = habitaciones[0].n_habitaciones;
+  // dobles = habitaciones[1].n_habitaciones;
+  // suit = habitaciones[2].n_habitaciones;
+
+  
   const fechaEntrada = document.getElementById(`fechaEntrada`).value;
   const fechaSalida = document.getElementById(`fechaSalida`).value;
   const lista = document.getElementById('habitacionesSeleccionadas');
@@ -144,15 +152,19 @@ function actualizarResumen() {
 
   lista.innerHTML = '';
   let total = 0;
+  // let listaborrar =[];
 
   seleccionadas.forEach(id => {
     const li = document.createElement('li');
     li.textContent = `Habitación: ${id}`;
     lista.appendChild(li);
 
-    // Suma el precio real de cada habitación (no el último toggled)
+    // listaborrar.push(id)
     total += precios[id];
   });
+  // let  nuevas = eliminarCoincidencias(sencillas, listaborrar);
+  // console.log(nuevas)
+
   total = total*dias;
   precioGlobal = precioGlobal + total
   precioTotal.textContent = total;
@@ -234,5 +246,29 @@ let precioGlobal = 0;
         console.error('Error:', error);
       });
     }
+
+
+    async function actualizarNHabitaciones(id, nuevasHabitaciones) {
+      try {
+        const url = `http://localhost:3000/habitaciones${id}`; 
+        const respuesta = await fetch(url, {
+          method: "PATCH", 
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ n_habitaciones: nuevasHabitaciones })
+        });
+    
+        if (!respuesta.ok) {
+          throw new Error("Error al actualizar la lista n_habitaciones");
+        }
+    
+       
+        const dataActualizada = await respuesta.json();
+        console.log("Actualizado:", dataActualizada);
+        return dataActualizada;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    
 
 pintarHabitaciones();
