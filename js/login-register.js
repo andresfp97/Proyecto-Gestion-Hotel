@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    iniciarFormulario.addEventListener('submit', async (e) => {
+        iniciarFormulario.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const correo = document.getElementById('login-correo').value;
-        const contrasena = document.getElementById('login-contrasena').value;
+        let correo = document.getElementById('login-correo').value;
+        let contrasena = document.getElementById('login-contrasena').value;
 
         try {
             const respuesta = await fetch('http://localhost:3000/usuarios');
@@ -45,16 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await respuesta.json();
             const usuario = data.find((usuario) => usuario.correo === correo && usuario.contrasena === contrasena);
+            console.log(usuario);
+            
 
             if (!usuario) {
-                throw new Error('Usuario no encontrado');
+               
+                document.getElementById('login-correo').value ="";
+                document.getElementById('login-contrasena').value = "";
+                throw new Error( alert('Usuario o contraseña incorrectos'));
+                
             }
 
             actualizarEstado(true);
-            localStorage.setItem('usuario', JSON.stringify(usuario.nombre));
+            localStorage.setItem('usuario', JSON.stringify(usuario.id));
             alert("Bienvenido " + usuario.nombre);
             actualizarSesion();
             window.location.href = 'habitaciones.html';
+            
         } catch (error) {
             console.error(error);
         }

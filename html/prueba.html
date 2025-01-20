@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar Habitaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Contenedor Principal -->
+  <div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold text-center mb-6">Selecciona tus Habitaciones</h1>
+
+    <!-- Formulario de Fechas -->
+
+    <div class="mb-6 bg-white p-6 rounded shadow-md">
+      <label class="block text-sm font-bold mb-2">Fecha de Entrada:</label>
+      <input type="date" id="fechaEntrada" class="w-full p-2 border rounded mb-4">
+
+      <label class="block text-sm font-bold mb-2">Fecha de Salida:</label>
+      <input type="date" id="fechaSalida" class="w-full p-2 border rounded">
+    </div>
+
+    <!-- Área de Selección -->
+    <div class="grid grid-cols-3 gap-4 mb-8">
+
+      <!-- Habitaciones (Ejemplo dinámico) -->`
+
+   
+        <button class="habitacion bg-gray-300 text-gray-700 text-center py-4 rounded hover:bg-green-400">
+           
+        </button>`
+
+    </div>
+
+    <!-- Resumen de Selección -->
+    <div class="bg-white p-6 rounded shadow-md">
+      <h2 class="text-xl font-bold mb-4">Resumen de la Reserva</h2>
+      <ul id="habitacionesSeleccionadas" class="mb-4"></ul>
+      <p class="text-lg font-semibold mb-4">Precio Total: <span id="precioTotal">$0</span></p>
+      <input type="checkbox" id="politicas" required>
+      <label for="politicas" class="text-sm">Acepto las políticas de la reserva</label>
+      <br><br>
+      <button onclick="confirmarReserva()" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+        Confirmar Reserva
+      </button>
+    </div>
+  </div>`
+
+  <script>
+    const seleccionadas = new Set(); // Para almacenar habitaciones seleccionadas
+    const precioPorNoche = 330000; // Precio por noche (ajustable)
+
+    // Función para seleccionar/deseleccionar habitaciones
+    function toggleSeleccion(elemento) {
+      const id = elemento.dataset.id;
+
+      if (seleccionadas.has(id)) {
+        seleccionadas.delete(id);
+        elemento.classList.remove('bg-green-400');
+        elemento.classList.add('bg-gray-300');
+      } else {
+        seleccionadas.add(id);
+        elemento.classList.remove('bg-gray-300');
+        elemento.classList.add('bg-green-400');
+      }
+
+      actualizarResumen();
+    }
+
+    // Actualizar el resumen de la reserva
+    function actualizarResumen() {
+      const lista = document.getElementById('habitacionesSeleccionadas');
+      const precioTotal = document.getElementById('precioTotal');
+
+      lista.innerHTML = ''; // Limpia la lista
+      let total = 0;
+
+      seleccionadas.forEach(id => {
+        const li = document.createElement('li');
+        li.textContent = `Habitación: ${id}`;
+        lista.appendChild(li);
+        total += precioPorNoche;
+      });
+
+      precioTotal.textContent = `$${total.toLocaleString('es-CO')}`;
+    }
+
+    // Confirmar la reserva y enviarla al servidor
+    function confirmarReserva() {
+      if (seleccionadas.size === 0) {
+        alert('Por favor, selecciona al menos una habitación');
+        return;
+      }
+
+      const fechaEntrada = document.getElementById('fechaEntrada').value;
+      const fechaSalida = document.getElementById('fechaSalida').value;
+      const politicasAceptadas = document.getElementById('politicas').checked;
+
+      if (!fechaEntrada || !fechaSalida) {
+        alert('Debes seleccionar las fechas de entrada y salida');
+        return;
+      }
+
+      if (!politicasAceptadas) {
+        alert('Debes aceptar las políticas para continuar');
+        return;
+      }
+
+      // Obtener id_usuario desde localStorage
+      const idUsuario = localStorage.getItem('id_usuario') || 1; // Valor predeterminado
+
+      const reserva = {
+        id: new Date().getTime(), // Genera un ID único basado en el tiempo actual
+        id_usuario: idUsuario,
+        id_habitacion: Array.from(seleccionadas).join(', '),
+        fecha_entrada: fechaEntrada,
+        fecha_salida: fechaSalida,
+        precio_total: seleccionadas.size * precioPorNoche,
+        estado: 'activa',
+        politicas_aceptadas: politicasAceptadas
+      };
+
+      console.log('Reserva confirmada:', reserva);
+
+      // Enviar la reserva al servidor (ejemplo con fetch)
+      fetch('https://api.tu-hotel.com/reservas', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reserva)
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Reserva realizada con éxito');
+      })
+      .catch(error => {
+        alert('Error al realizar la reserva');
+        console.error('Error:', error);
+      });
+    }
+  </script>
+</body>
+</html>

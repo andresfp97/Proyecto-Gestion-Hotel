@@ -30,6 +30,15 @@ logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('usuario');
     actualizarSesion();
     alert('Sesión cerrada correctamente');
+    window.location.href = "../index.html";
+});
+
+mobileLogoutBtn.addEventListener('click', () => {
+    sesionActiva = false;
+    localStorage.removeItem('usuario');
+    actualizarSesion();
+    alert('Sesión cerrada correctamente');
+    window.location.href = "../index.html";
 });
 
 actualizarSesion();

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro y Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/menu.js" defer></script>
     <script src="../js/login-register.js" type="module" defer></script>
+
 </head>
 <body>
 
@@ -31,7 +33,7 @@
         <div id="menu" class="hidden md:flex space-x-4">
           <a href="../index.html" class="text-gray-800 hover:text-blue-600">Inicio</a>
           <a href="habitaciones.html" class="text-gray-800 hover:text-blue-600">Habitaciones</a>
-          <a href="#" class="text-gray-800 hover:text-blue-600">Contacto</a>
+          <a href="contacto.html" class="text-gray-800 hover:text-blue-600">Contacto</a>
          
           <a href="login-registro.html" id="login-btn" class="text-gray-800 hover:text-blue-600">Iniciar Sesión</a>
           <button id="logout-btn" class="hidden text-white bg-red-600 px-4 rounded hover:bg-red-700 focus:outline-none">Cerrar Sesión</button>
@@ -40,11 +42,13 @@
   
     
       <div id="mobile-menu" class="hidden md:hidden">
-        <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inicio</a>
-        <a href="html/habitaciones.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Habitaciones</a>
-        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contacto</a>
-        <a href="login-registro.html" id="mobile-login-btn" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Iniciar Sesión</a>
-        <button id="mobile-logout-btn" class="hidden block px-4 text-white bg-red-600 rounded hover:bg-red-700">Cerrar Sesión</button>
+        <a href="../index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Inicio</a>
+        <a href="../html/habitaciones.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Habitaciones</a>
+        <a href="../html/contacto.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contacto</a>
+        <a href="../html/login-registro.html" id="mobile-login-btn"
+          class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Iniciar Sesión</a>
+        <button id="mobile-logout-btn" class="hidden block px-4 text-white bg-red-600 rounded hover:bg-red-700">Cerrar
+          Sesión</button>
       </div>
     </div>
 </nav>

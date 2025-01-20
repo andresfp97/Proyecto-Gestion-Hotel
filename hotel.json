@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": "220d",
+      "id": "bf0e",
       "nombre": "Andres Portilla",
       "correo": "123andresportilla@gmail.com",
       "contrasena": "123",
@@ -9,11 +9,11 @@
       "reserva": []
     },
     {
-      "id": "4507",
+      "id": "a029",
       "nombre": "jinder arias",
       "correo": "jinderjj@gmail.com",
       "contrasena": "321",
-      "telefono": "3144534667",
+      "telefono": "3214567891",
       "reserva": []
     }
   ],
@@ -26,7 +26,7 @@
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697790279-4x3?wid=470&fit=constrain"
       ],
       "descripcion": "Habitación con  una cama king size, espacio de trabajo y baño privado.",
-      "precio_por_noche": "150.000",
+      "precio_por_noche": "150000",
       "maximo_huespedes": 2,
       "habitaciones_disponibles": 16,
       "n_habitaciones": [
@@ -57,7 +57,7 @@
         "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-7731464931-4x3?wid=470&fit=constrain"
       ],
       "descripcion": "Habitación con dos camas doble, espacio amplio de trabajo y baño privado.",
-      "precio_por_noche": "230.000",
+      "precio_por_noche": "230000",
       "maximo_huespedes": 4,
       "habitaciones_disponibles": 12,
       "n_habitaciones": [
@@ -84,7 +84,7 @@
         "https://digital.ihg.com/is/image/ihg/holiday-inn-bogota-10028884716-4x3?wid=470&fit=constrain"
       ],
       "descripcion": "Suite de 300 pies cuadrados Sala de estar Comedor Cocina Microondas Mininevera Balcón Sofá cama Se admiten mascotas",
-      "precio_por_noche": "330.000",
+      "precio_por_noche": "330000",
       "maximo_huespedes": 4,
       "habitaciones_disponibles": 3,
       "n_habitaciones": [
@@ -96,12 +96,13 @@
   ],
   "reservas": [
     {
-      "id": "1",
-      "id_usuario": 1,
-      "id_habitacion": 101,
-      "fecha_entrada": "2025-01-15",
-      "fecha_salida": "2025-01-16",
-      "precio_total": 150,
+      "id": "e887",
+      "id_usuario": "bf0e",
+      "id_habitacion": "202",
+      "fecha_entrada": "2025-01-19",
+      "fecha_salida": "2025-01-22",
+      "precio_total": 450000,
+      "n_dias": 3,
       "estado": "activa",
       "politicas_aceptadas": true
     }
