@@ -28,8 +28,9 @@
       "descripcion": "Habitación con  una cama king size, espacio de trabajo y baño privado.",
       "precio_por_noche": "150000",
       "maximo_huespedes": 2,
-      "habitaciones_disponibles": 16,
+      "habitaciones_disponibles": 15,
       "n_habitaciones": [
+        202,
         203,
         204,
         301,
@@ -57,9 +58,8 @@
       "descripcion": "Habitación con dos camas doble, espacio amplio de trabajo y baño privado.",
       "precio_por_noche": "230000",
       "maximo_huespedes": 4,
-      "habitaciones_disponibles": 12,
+      "habitaciones_disponibles": 11,
       "n_habitaciones": [
-        601,
         602,
         603,
         701,
@@ -84,9 +84,8 @@
       "descripcion": "Suite de 300 pies cuadrados Sala de estar Comedor Cocina Microondas Mininevera Balcón Sofá cama Se admiten mascotas",
       "precio_por_noche": "330000",
       "maximo_huespedes": 4,
-      "habitaciones_disponibles": 3,
+      "habitaciones_disponibles": 2,
       "n_habitaciones": [
-        1001,
         1101,
         1201
       ]
@@ -94,13 +93,13 @@
   ],
   "reservas": [
     {
-      "id": "91cd",
+      "id": "9f45",
       "id_usuario": "bf0e",
-      "id_habitacion": "201, 202",
+      "id_habitacion": "201, 601, 1001",
       "fecha_entrada": "2025-01-21",
-      "fecha_salida": "2025-01-24",
-      "precio_total": 900000,
-      "n_dias": 3,
+      "fecha_salida": "2025-01-23",
+      "precio_total": 1420000,
+      "n_dias": 2,
       "estado": "activa",
       "politicas_aceptadas": true
     }

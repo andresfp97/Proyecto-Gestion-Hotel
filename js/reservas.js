@@ -42,7 +42,7 @@ async function pintarHabitaciones() {
         </div>
         <div class="flex flex-col md:flex-row items-center justify-between mt-4">
             <div class="text-center mb-4 md:mb-0">
-                <p class="text-blue-600 font-semibold">Habitaciones Disponibles: ${element.habitaciones_disponibles}</p>
+                <p class="text-blue-600 font-semibold" id="hDisponibles-${index}" >Habitaciones Disponibles: ${element.habitaciones_disponibles}</p>
             </div>
             <button class="px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700" id="reserva">Reservar</button>
         </div>
@@ -154,6 +154,7 @@ function actualizarResumen() {
   const fechaSalida = document.getElementById(`fechaSalida`).value;
   const lista = document.getElementById('habitacionesSeleccionadas');
   const precioTotal = document.getElementById('precioTotal');
+
   let dias = calcularDiferenciaDias(fechaEntrada, fechaSalida)
 
   lista.innerHTML = '';
@@ -175,6 +176,18 @@ function actualizarResumen() {
   if (!dias == 0) {
     total = total * dias;
   }
+  // for (let i = 0; i < 3; i++) {
+
+  //   const cantHabitaciones = document.getElementById(`hDisponibles-${i}`);
+  //   if (i == 0) cantHabitaciones.textContent = `Habitaciones Disponibles: ${sencillas.length}`;
+  //   if (i == 1) cantHabitaciones.textContent = `Habitaciones Disponibles: ${dobles.length}`;
+  //   if (i == 2) cantHabitaciones.textContent = `Habitaciones Disponibles: ${suit.length}`;
+  // }
+  habiSencillas = sencillas.length;
+  habiDobles = dobles.length;
+  habiSuit = suit.length;
+
+
 
   precioTotal.textContent = total;
   precioGlobal = total;
@@ -182,9 +195,13 @@ function actualizarResumen() {
 
 let nuevas = [];
 let precioGlobal;
+let conGlobal;
 let sencillas;
 let dobles;
 let suit;
+let habiSencillas;
+let habiDobles;
+let habiSuit;
 // calcular los dis que se reserva la habitacion
 
 function calcularDiferenciaDias(fechaInicio, fechaFin) {
@@ -262,20 +279,20 @@ function confirmarReserva(precioHabitacion) {
     });
 
   // Actualizar habitaciones disponibles
-  actualizarNHabitaciones(1, sencillas);
-  actualizarNHabitaciones(2, dobles);
-  actualizarNHabitaciones(3, suit);
+  actualizarNHabitaciones(1, sencillas, habiSencillas);
+  actualizarNHabitaciones(2, dobles, habiDobles);
+  actualizarNHabitaciones(3, suit, habiSuit);
 
 }
 
 
-async function actualizarNHabitaciones(id, nuevasHabitaciones) {
+async function actualizarNHabitaciones(id, nuevasHabitaciones , cantHabitaciones) {
   try {
     const url = `http://localhost:3000/habitaciones/${id}`;
     const respuesta = await fetch(url, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ n_habitaciones: nuevasHabitaciones })
+      body: JSON.stringify({ n_habitaciones: nuevasHabitaciones, habitaciones_disponibles: cantHabitaciones }),
     });
 
     if (!respuesta.ok) {
