@@ -19,7 +19,7 @@
   ],
   "habitaciones": [
     {
-      "id": "101",
+      "id": "1",
       "nombre": "Habitacion Sencilla",
       "imgs": [
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3479927719-4x3?wid=470&fit=constrain",
@@ -30,8 +30,6 @@
       "maximo_huespedes": 2,
       "habitaciones_disponibles": 16,
       "n_habitaciones": [
-        201,
-        202,
         203,
         204,
         301,
@@ -49,7 +47,7 @@
       ]
     },
     {
-      "id": "102",
+      "id": "2",
       "nombre": "Habitacion Doble",
       "imgs": [
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-3697789966-4x3?wid=470&fit=constrain",
@@ -76,7 +74,7 @@
       ]
     },
     {
-      "id": "103",
+      "id": "3",
       "nombre": "Suite King",
       "imgs": [
         "https://digital.ihg.com/is/image/ihg/holiday-inn-express-and-suites-bogota-4192235498-4x3?wid=470&fit=constrain",
@@ -96,24 +94,13 @@
   ],
   "reservas": [
     {
-      "id": "e887",
+      "id": "91cd",
       "id_usuario": "bf0e",
-      "id_habitacion": "202",
-      "fecha_entrada": "2025-01-19",
-      "fecha_salida": "2025-01-22",
-      "precio_total": 450000,
+      "id_habitacion": "201, 202",
+      "fecha_entrada": "2025-01-21",
+      "fecha_salida": "2025-01-24",
+      "precio_total": 900000,
       "n_dias": 3,
-      "estado": "activa",
-      "politicas_aceptadas": true
-    },
-    {
-      "id": "b6f8",
-      "id_usuario": "bf0e",
-      "id_habitacion": "801, 802, 903",
-      "fecha_entrada": "2025-01-20",
-      "fecha_salida": "2025-01-22",
-      "precio_total": 0,
-      "n_dias": 2,
       "estado": "activa",
       "politicas_aceptadas": true
     }
